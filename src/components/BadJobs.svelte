@@ -1,12 +1,11 @@
 <script language="ts">
-  import processJob from "@/utils/process-job";
+  import aiEngine from "@/utils/aiengine";
 
   let result = "";
   let job = "";
 
   const handleClick = () => {
-    console.log(result);
-    result = processJob(job);
+    result = aiEngine(job);
   };
 </script>
 
@@ -38,6 +37,7 @@
     }
     .result-font {
       color: gray;
+      margin: 10px;
     }
   }
 </style>

@@ -23,7 +23,7 @@ const badJobResponses = [
 /** 
  * Takes user input and returns responsed based on the users input
  */
-const processJob = (userInput: string): string => {
+const aiEngine = (userInput: string): string => {
   const cleanedInput = cleanInput(userInput)
 
   if(isNoJob(cleanedInput)) return "No job at all? Good work! That's a good job!"
@@ -38,4 +38,4 @@ const isNoJob = (job) =>  job === "" || job === "none" || job === "unemployed"
 const chooseRandomResponse = (items: string[]) => {
   return items[Math.floor(Math.random()*items.length)];
 }
-export default processJob
+export default aiEngine
